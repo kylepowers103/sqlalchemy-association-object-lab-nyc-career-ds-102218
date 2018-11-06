@@ -1,5 +1,9 @@
 from models import *
 
+session = sessionmaker()
+session.configure(bind=engine)
+Base.metadata.bind = engine
+
 def query_experimentation(session):
-    pass
-    # import pdb; pdb.set_trace()
+
+    import pdb; pdb.set_trace()
